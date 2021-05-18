@@ -1,0 +1,39 @@
+{
+  "name": "gamergrep",
+  "version": "0.1.0",
+  "description": "Your Games. Your stats.",
+  "author": "Michael Mazzone",
+  "private": true,
+  "keywords": [],
+  "homepage": "https://github.com/GitMazzone/gamergrep#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitMazzone/gamergrep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GitMazzone/gamergrep/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "webpack --config webpack.common.js --watch"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "electron": "^12.0.8",
+    "electron-reload": "^1.5.0",
+    "sass": "^1.32.13",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
