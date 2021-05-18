@@ -28,9 +28,11 @@
 
 # GamerGrep
 
-❤️ **Your games. Your stats.**
+🏆 **Your games. Your stats.** 🏆
 
 # Getting Started
+
+Style guide: https://github.com/airbnb/javascript
 
 ## Running locally
 
@@ -38,15 +40,6 @@
 yarn start
 ```
 
-To debug the prod build, run
-
-```bash
-yarn cross-env DEBUG_PROD=true yarn build
-yarn cross-env DEBUG_PROD=true yarn start
-```
-
 # Build & Deploy
 
-Prod build - `yarn build`  
-Inspect build size - `OPEN_ANALYZER=true yarn build`  
-Package for local platform, output in release dir - `yarn package`
+TODO

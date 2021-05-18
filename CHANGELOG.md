@@ -4,3 +4,5 @@
 - Major config files set: git, eslint, editor, Webpack, package.
 - README updated.
 - Release philosophy determined. Read more [here](https://trello.com/c/OVGX5K3Y/22-changelog-release-philosophy)
+- Integrated Airbnb style guide & eslint config.
+- Changed files to `.jsx`.
