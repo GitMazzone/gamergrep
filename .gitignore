@@ -20,7 +20,7 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+out/Release
 .eslintcache
 
 # Dependency directory
@@ -39,6 +39,7 @@ src/renderer.prod.js.map
 src/style.css
 src/style.css.map
 dist
+out
 dll
 main.js
 main.js.map

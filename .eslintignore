@@ -20,7 +20,7 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+out/Release
 .eslintcache
 
 # Dependency directory
@@ -51,6 +51,3 @@ __snapshots__
 # Package.json
 package.json
 .travis.yml
-*.css.d.ts
-*.sass.d.ts
-*.scss.d.ts
