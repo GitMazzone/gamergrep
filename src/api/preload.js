@@ -1,4 +1,7 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const {
+  contextBridge,
+  ipcRenderer,
+} = require('electron');
 
 // Expose APIs related to accessing the local computer
 contextBridge.exposeInMainWorld('electron', {
@@ -6,6 +9,14 @@ contextBridge.exposeInMainWorld('electron', {
     sendNotification(message) {
       console.log(message);
       ipcRenderer.send('notify', message);
+    },
+  },
+  titlebarApi: {
+    closeApplication() {
+      ipcRenderer.send('exitApplication');
+    },
+    minimizeApplication() {
+      ipcRenderer.send('minimizeApplication');
     },
   },
 });
