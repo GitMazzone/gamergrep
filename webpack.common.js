@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.jsx',
+  entry: './src/index.jsx',
   devtool: 'inline-source-map',
   target: 'electron-renderer',
   module: {
@@ -40,6 +40,6 @@ module.exports = {
   },
   output: {
     filename: 'app.jsx',
-    path: path.resolve(__dirname, 'build', 'jsx'),
+    path: path.resolve(__dirname, 'out', 'jsx'),
   },
 };
