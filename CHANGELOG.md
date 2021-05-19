@@ -1,8 +1,10 @@
-# 0.1.0 (May 18, 2021)
+# 0.1.0 (May 19, 2021)
 
-- Initialized the repo.
-- Config files set: git, eslint, editor, Webpack, package.
-- MD files set: README, CHANGELOG.
+- Initial repo.
+- Config initialized: git, eslint, editor, Webpack, package, babel, cypress, jest.
+- MD files: README, CHANGELOG.
 - Release philosophy determined. Read more [here](https://trello.com/c/OVGX5K3Y/22-changelog-release-philosophy)
-- Integrated Airbnb style guide & eslint config.
-- Now using Tailwindcss.
+- Added Airbnb style guide & eslint config.
+- Added Tailwindcss.
+- Added Commitizen.
+- Added Cypress & Jest for e2e and unit testing.
