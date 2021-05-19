@@ -27,27 +27,35 @@
 # Getting Started
 
 Style guide: https://github.com/airbnb/javascript  
-Tailwindcss docs: https://tailwindcss.com/docs
+Tailwindcss docs: https://tailwindcss.com/docs  
+Jest docs: https://jestjs.io/docs/tutorial-react  
+Cypress docs: https://docs.cypress.io/guides/references/assertions
 
 ## Running locally
 
 With two terminals open, start the Webpack server in one with:
 
-```bash
+```
 yarn watch
 ```
 
 And start the electron app in the other with:
 
-```bash
+```
 yarn start
 ```
 
 ## Test your code
 
+Run unit tests with:
+
+```
+yarn test
+```
+
 With the app running, run e2e Cypress tests with:
 
-```bash
+```
 yarn e2e
 ```
 
