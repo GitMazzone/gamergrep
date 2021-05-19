@@ -7,6 +7,6 @@ module.exports = {
     'no-console': 'off',
     'global-require': 'off',
     'import/no-dynamic-require': 'off',
-    // 'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'no-undef': 'off',
   },
 };

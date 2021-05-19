@@ -10,12 +10,6 @@
 </div>
 <div align="center">
 
-![Latest npm package version](https://img.shields.io/badge/NPM%40stable-1.0.0-blue?logo=npm&style=flat-square)
-![Latest npm package version](https://img.shields.io/badge/NPM%40beta-2.0.0-orange?logo=npm&style=flat-square)
-
-</div>
-<div align="center">
-
 <p align="center">
   <a href="https://github.com/GitMazzone/wowza/issues">Submit an Issue</a>
   <br>
@@ -32,14 +26,31 @@
 
 # Getting Started
 
-Style guide: https://github.com/airbnb/javascript
+Style guide: https://github.com/airbnb/javascript  
+Tailwindcss docs: https://tailwindcss.com/docs
 
 ## Running locally
+
+With two terminals open, start the Webpack server in one with:
+
+```bash
+yarn watch
+```
+
+And start the electron app in the other with:
 
 ```bash
 yarn start
 ```
 
-# Build & Deploy
+## Test your code
+
+With the app running, run e2e Cypress tests with:
+
+```bash
+yarn e2e
+```
+
+## Build & deploy
 
 TODO
