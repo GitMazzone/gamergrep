@@ -10,7 +10,7 @@
 <div align="center">
 
 <p align="center">
-  <a href="https://github.com/GitMazzone/wowza/issues">Submit an Issue</a>
+  <a href="https://github.com/GitMazzone/gamergrep/issues">Submit an Issue</a>
   <br>
   <br>
 </p>
