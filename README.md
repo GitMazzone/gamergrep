@@ -28,12 +28,20 @@
 Style guide: https://github.com/airbnb/javascript  
 Tailwindcss docs: https://tailwindcss.com/docs  
 Jest docs: https://jestjs.io/docs/tutorial-react  
-Cypress docs: https://docs.cypress.io/guides/references/assertions
+Cypress docs: https://docs.cypress.io/guides/references/assertions  
+StorybookJS docs: https://storybook.js.org/docs/react/get-started/introduction
 
 ## Running locally
 
-Make sure you globally install Commitizen with `npm i commitizen -g`.
+Make sure you globally install Commitizen with `npm i commitizen -g`. This will allow you to push clean, useful, standardized commits. ❤️
 
+**To design & test individual components, first use Storybook:**
+
+```
+yarn storybook
+```
+
+**When you're ready to integrate components, continue.**  
 With two terminals open, start the Webpack server in one with:
 
 ```
@@ -68,60 +76,14 @@ Commit using:
 yarn commit
 ```
 
-### Commit format:
+Commitizen will walk you through the required fields.  
+The main style points are
 
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
+- Use imperative, present tense, "change" not "changed" nor "changes"
+- Don't put a dot (.) at the end
+- Breaking changes should start with `BREAKING CHANGE:`
 
-### Type
-
-Must be one of the following:
-
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing
-  semi-colons, etc)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing or correcting existing tests
-- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation
-  generation
-
-### Scope
-
-The scope could be anything specifying place of the commit change. For example `$location`,
-`$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
-
-You can use `*` when the change affects more than a single scope.
-
-### Subject
-
-The subject contains succinct description of the change:
-
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize first letter
-- no dot (.) at the end
-
-### Body
-
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
-The body should include the motivation for the change and contrast this with previous behavior.
-
-### Footer
-
-The footer should contain any information about **Breaking Changes** and is also the place to
-[reference GitHub issues that this commit closes][closing-issues].
-
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines.
-The rest of the commit message is then used for this.
-
-A detailed explanation can be found in this [document][commit-message-format].
+This is not enforced and commits can pass through without using this. But that's nasty.
 
 ## Build & deploy
 
