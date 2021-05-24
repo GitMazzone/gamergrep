@@ -11,12 +11,4 @@ contextBridge.exposeInMainWorld('electron', {
       ipcRenderer.send('notify', message);
     },
   },
-  titlebarApi: {
-    closeApplication() {
-      ipcRenderer.send('exitApplication');
-    },
-    minimizeApplication() {
-      ipcRenderer.send('minimizeApplication');
-    },
-  },
 });
