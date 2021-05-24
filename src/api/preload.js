@@ -1,4 +1,7 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const {
+  contextBridge,
+  ipcRenderer,
+} = require('electron');
 
 // Expose APIs related to accessing the local computer
 contextBridge.exposeInMainWorld('electron', {
