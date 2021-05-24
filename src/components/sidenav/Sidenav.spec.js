@@ -1,12 +1,10 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import renderer, { act } from 'react-test-renderer';
-import Link from './Sidenav';
+import Sidenav from './Sidenav';
 
 test('Link changes the class when hovered', () => {
   const component = renderer.create(
-    <Link page="http://www.google.com">Facebook</Link>,
+    <Sidenav>Sidenav</Sidenav>,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

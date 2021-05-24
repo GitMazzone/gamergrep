@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "no-undef": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".spec.js", ".jsx"] }]
+  }
+}
