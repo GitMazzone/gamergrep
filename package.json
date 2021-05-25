@@ -16,7 +16,8 @@
   "main": "app/main.js",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "start": "concurrently --kill-others \"webpack --config build/webpack.app.config.js --watch\" \"electron .\"",
+    "watch": "webpack --config build/webpack.app.config.js --watch",
+    "start": "electron .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",

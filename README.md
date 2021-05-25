@@ -45,6 +45,12 @@ yarn storybook
 Start the Webpack server and live reloads with:
 
 ```
+yarn watch
+```
+
+Start the electron app with:
+
+```
 yarn start
 ```
 

@@ -1,7 +1,19 @@
-const { app, BrowserWindow } = require('electron');
+import appMenuTemplate from './components/menu/app_menu_template';
+import editMenuTemplate from './components/menu/edit_menu_template';
+import devMenuTemplate from './components/menu/dev_menu_template';
+
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 const isDevEnvironment = !app.isPackaged;
+
+const setApplicationMenu = () => {
+  const menus = [appMenuTemplate, editMenuTemplate];
+  if (isDevEnvironment) {
+    menus.push(devMenuTemplate);
+  }
+  Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
+};
 
 const createWindow = async () => {
   const RESOURCES_PATH = '../assets';
@@ -46,3 +58,4 @@ app.on('window-all-closed', () => {
 });
 
 app.whenReady().then(createWindow);
+app.whenReady().then(setApplicationMenu);
