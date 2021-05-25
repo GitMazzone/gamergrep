@@ -8,7 +8,7 @@ describe('The main dashboard', () => {
   });
 
   // Not sure if this will be how it's done.
-  it('Loads from build output', () => {
-    // cy.request('../../out/jsx/app.jsx');
+  it('Loads build output from app/', () => {
+    // cy.request('../../app/app.js');
   });
 });

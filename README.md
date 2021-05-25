@@ -42,13 +42,7 @@ yarn storybook
 ```
 
 **When you're ready to integrate components, continue.**  
-With two terminals open, start the Webpack server in one with:
-
-```
-yarn watch
-```
-
-And start the electron app in the other with:
+Start the Webpack server and live reloads with:
 
 ```
 yarn start
@@ -85,6 +79,10 @@ The main style points are
 
 This is not enforced and commits can pass through without using this. But that's nasty.
 
-## Build & deploy
+## Package the app
 
-TODO
+To package the app in a distributable format (dmg, Windows installer), run
+
+```
+yarn dist
+```

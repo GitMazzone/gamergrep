@@ -1,6 +1,6 @@
 {
   "name": "gamergrep",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Your Games. Your stats.",
   "author": "Michael Mazzone",
   "private": true,
@@ -13,18 +13,45 @@
   "bugs": {
     "url": "https://github.com/GitMazzone/gamergrep/issues"
   },
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
-    "watch": "webpack --config webpack.common.js --watch",
-    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "start": "concurrently --kill-others \"webpack --config build/webpack.app.config.js --watch\" \"electron .\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
     "e2e": "yarn run cypress open",
-    "commit": "cz"
+    "commit": "cz",
+    "dist": "webpack --config build/webpack.app.config.js --env=production && electron-builder"
+  },
+  "build": {
+    "appId": "com.electron.gamergrep",
+    "productName": "GamerGrep",
+    "copyright": "Copyright © 2021 Michael Mazzone",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.games",
+      "icon": "build/assets/icon-mac.png"
+    },
+    "win": {
+      "icon": "build/assets/icon-windows.png"
+    },
+    "publish": null
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
-    "electron": "^12.0.8",
+    "electron-reload": "^1.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -41,10 +68,12 @@
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "commitizen": "4.2.4",
+    "concurrently": "^6.2.0",
     "css-loader": "^5.2.4",
     "cypress": "^7.3.0",
     "cz-conventional-changelog": "3.3.0",
-    "electron-reload": "^1.5.0",
+    "electron": "^12.0.9",
+    "electron-builder": "^22.10.5",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -62,11 +91,8 @@
     "style-loader": "^2.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "webpack-cli": "^4.7.0",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^3.0.0"
   }
 }
