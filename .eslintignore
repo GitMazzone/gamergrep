@@ -20,7 +20,7 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-out/Release
+dist/Release
 .eslintcache
 
 # Dependency directory
@@ -30,20 +30,8 @@ node_modules
 # OSX
 .DS_Store
 
-# App packaged
-release
-src/*.main.prod.js
-src/main.prod.js
-src/main.prod.js.map
-src/renderer.prod.js
-src/renderer.prod.js.map
-src/style.css
-src/style.css.map
+# App packaged (TODO)
 dist
-out
-dll
-main.js
-main.js.map
 
 .idea
 npm-debug.log.*

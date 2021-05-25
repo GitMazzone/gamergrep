@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Sidenav = ({ children }) => {
-  <>{children}</>;
-};
-Sidenav.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Sidenav = () => (
+  <>
+    <p>Sidenav!</p>
+  </>
+);
 
 export default Sidenav;
