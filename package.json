@@ -16,9 +16,10 @@
   "main": "app/main.js",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "start": "concurrently --kill-others \"webpack --config build/webpack.app.config.js --watch\" \"electron .\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "watch": "webpack --config build/webpack.app.config.js --watch",
+    "start": "electron .",
     "test": "jest",
     "e2e": "yarn run cypress open",
     "commit": "cz",
